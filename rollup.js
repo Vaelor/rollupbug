@@ -14,7 +14,6 @@ export default {
 		commonjs()
 	],
 	external: id => {
-		// This is not a regex list because this would cause a variety of possible mistakes
 		const excludeNodeModulesList = [/nodeModule/]
 		const isNodeModule = excludeNodeModulesList.some(rx => rx.test(id))
 		if (isNodeModule) {
